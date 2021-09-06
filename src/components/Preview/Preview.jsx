@@ -1,7 +1,7 @@
 import React from 'react';
 import useStyles from './style';
 // import { Products } from '../Products/Products';
-import { Typography, Button, Card, CardActions, CardContent, CardMedia, IconButton, Grid } from '@material-ui/core';
+import { Typography, Card, CardActions, CardContent, CardMedia, IconButton, Grid } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
 
 const Preview = ({ products, onAddToCart }) => {
