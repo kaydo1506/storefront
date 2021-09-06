@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@material-ui/core';
-import { useForm, FormProvider, useFormState } from 'react-hook-form';
+import { useForm, FormProvider } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 import { commerce } from '../../lib/commerce';
@@ -48,7 +48,7 @@ const AddressForm = ({ checkoutToken, next }) => {
 
     useEffect(() => {
         fetchShippingCountries(checkoutToken.id);
-    }, []);
+    }, );
     useEffect(() => {
         if (shippingCountry) {
             fetchSubdivision(shippingCountry);
@@ -58,7 +58,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     }, [shippingCountry]);
     useEffect(() => {
         if (shippingSubdivision) fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);
-    }, [shippingSubdivision]);
+    }, [shippingSubdivision, checkoutToken.id, shippingCountry]);
 
     return (
         <>
