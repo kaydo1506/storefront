@@ -30,7 +30,7 @@ const Preview = ({ products, onAddToCart }) => {
     return (
         <div className={classes.root}>
             <Paper className={classes.paper}>
-                <Grid container >
+                <Grid container xs>
                     <Grid item>
                         <ButtonBase className={classes.image}>
                             <img className={classes.img} alt={product.name} src={product.media.source} />
@@ -64,10 +64,19 @@ const Preview = ({ products, onAddToCart }) => {
                     </Grid>
                 </Grid>
                 <div className={classes.cardContent}>
-                    <Button component={Link} variant='outlined' to='/'>
+                    <Button
+                        component={Link}
+                        variant='outlined'
+                        to='/'
+                        style={{ backgroundColor: '#B5651D', color: '#FFFFFF' }}
+                    >
                         Go Back
                     </Button>
-                    <IconButton aria-label='Add to Cart' onClick={() => onAddToCart(product.id, 1)}>
+                    <IconButton
+                        aria-label='Add to Cart'
+                        onClick={() => onAddToCart(product.id, 1)}
+                        style={{ backgroundColor: '#B5651D', color: '#FFFFFF' }}
+                    >
                         <AddShoppingCart />
                     </IconButton>
                 </div>

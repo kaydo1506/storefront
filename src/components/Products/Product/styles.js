@@ -5,11 +5,11 @@ export default makeStyles(() => ({
         // maxWidth: 345, original width style
         maxWidth: '100%',
 
-        // height: 390,
+        // height: 550,
     },
     media: {
         paddingTop: '56.25%', // 16:9
-        height: '100px',
+        height: '170px',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     },
