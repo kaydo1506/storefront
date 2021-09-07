@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Products, Navbar, Cart, Checkout } from './components';
+import { Products, Navbar, Cart, Checkout, Preview } from './components';
 // //////////////////////////////////////////////
 
 // //////////////////////////////////////////////
@@ -112,9 +112,9 @@ const App = () => {
                             error={errorMessage}
                         />
                     </Route>
-                  {/*  <Route path='/Preview/id'>
+                    <Route path='/Preview/:id'>
                         <Preview products={products} onAddToCart={handleAddToCart} />
-    </Route> */}
+                    </Route>
                 </Switch>
             </div>
         </Router>
