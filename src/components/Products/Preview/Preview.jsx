@@ -30,7 +30,7 @@ const Preview = ({ products, onAddToCart }) => {
     return (
         <div className={classes.root}>
             <Paper className={classes.paper}>
-                <Grid container xs>
+                <Grid container>
                     <Grid item>
                         <ButtonBase className={classes.image}>
                             <img className={classes.img} alt={product.name} src={product.media.source} />
