@@ -32,7 +32,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
                 ))}
             </Grid>
             <div className={classes.cardDetails}>
-                <Typography variant='h5'>Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
+                <Typography variant='h6'>Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
                 <div>
                     <Button
                         className={classes.emptyButton}
@@ -51,7 +51,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
                         size='large'
                         type='button'
                         variant='contained'
-                        color='primary'
+                        style={{ backgroundColor: 'green', color: 'white' }}
                     >
                         Checkout
                     </Button>

@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
         maxWidth: '100%',
         flexGrow: 1,
         marginTop: '100px',
+        backgroundColor: 'antiquewhite',
     },
 
     cardActions: {
@@ -26,7 +27,7 @@ export default makeStyles((theme) => ({
     image: {
         width: 500,
         height: 500,
-        backgroundColor: '#FFECD4',
+
         [theme.breakpoints.down('sm')]: {
             width: 'auto',
         },
