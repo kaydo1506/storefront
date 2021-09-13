@@ -13,20 +13,17 @@ import Paper from '@material-ui/core/Paper';
 const Preview = ({ products, onAddToCart }) => {
     const classes = useStyles();
 
-    console.log(products[0]);
-    // console.log(window.location.pathname.split('').slice(9, 28).join(''));
-
     const findProduct = (id) => {
         return products.find((product) => product.id === id) || null;
     };
     const productId = window.location.pathname.split('').slice(9, 28).join('');
     let product = findProduct(productId);
-    console.log(product);
-    console.log(productId);
-    const [age, setAge] = React.useState('');
+
+    const [size, setSize] = React.useState('');
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setSize(event.target.value);
     };
+
     return (
         <div className={classes.root}>
             <Paper className={classes.paper}>
@@ -52,7 +49,7 @@ const Preview = ({ products, onAddToCart }) => {
                         </Typography>
                         <FormControl>
                             <InputLabel id='demo-controlled-open-select-label'>Select Size</InputLabel>
-                            <Select value={age} onChange={handleChange}>
+                            <Select value={size} onChange={handleChange}>
                                 <MenuItem value=''>
                                     <em>None</em>
                                 </MenuItem>
@@ -64,19 +61,10 @@ const Preview = ({ products, onAddToCart }) => {
                     </Grid>
                 </Grid>
                 <div className={classes.cardContent}>
-                    <Button
-                        component={Link}
-                        variant='outlined'
-                        to='/'
-                        style={{ backgroundColor: '#B5651D', color: '#FFFFFF' }}
-                    >
+                    <Button component={Link} variant='outlined' to='/'>
                         Go Back
                     </Button>
-                    <IconButton
-                        aria-label='Add to Cart'
-                        onClick={() => onAddToCart(product.id, 1)}
-                        style={{ backgroundColor: '#B5651D', color: '#FFFFFF' }}
-                    >
+                    <IconButton aria-label='Add to Cart' onClick={() => onAddToCart(product.id, 1)}>
                         <AddShoppingCart />
                     </IconButton>
                 </div>

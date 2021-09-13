@@ -30,24 +30,19 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
     const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
 
     useEffect(() => {
-        let isMounted = true;
-        if (isMounted)
-            if (cart.id) {
-                const generateToken = async () => {
-                    try {
-                        const token = await commerce.checkout.generateToken(cart.id, { type: 'cart' });
+        if (cart.id) {
+            const generateToken = async () => {
+                try {
+                    const token = await commerce.checkout.generateToken(cart.id, { type: 'cart' });
 
-                        setCheckoutToken(token);
-                    } catch {
-                        if (activeStep !== steps.length) history.push('/');
-                    }
-                };
+                    setCheckoutToken(token);
+                } catch {
+                    if (activeStep !== steps.length) history.push('/');
+                }
+            };
 
-                generateToken();
-            }
-        return () => {
-            isMounted = false;
-        };
+            generateToken();
+        }
     }, [cart, activeStep, history]);
 
     const next = (data) => {

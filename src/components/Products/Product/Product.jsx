@@ -13,7 +13,8 @@ const Product = ({ product, onAddToCart }) => {
             <Link key={product.id} to={`/preview/${product.id}`} className={classes.link}>
                 <CardMedia className={classes.media} image={product.media.source} title={product.name}></CardMedia>
             </Link>
-            {/* <CardMedia className={classes.media} image={product.media.source} title={product.name}></CardMedia>*/}
+
+            {/* <CardMedia className={classes.media} image={product.media.source} title={product.name}></CardMedia>   */}
 
             <CardContent>
                 <div className={classes.cardContent}>
