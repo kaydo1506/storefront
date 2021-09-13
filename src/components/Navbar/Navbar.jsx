@@ -19,17 +19,7 @@ const Navbar = ({ totalItems }) => {
                         STOREFRONT-Ify
                     </Typography>
                     <div className={classes.grow} />
-                    {location.pathname === '/' && (
-                        <div className={classes.button}>
-                            <IconButton component={Link} to='/cart' aria-label='Show cart items' color='inherit'>
-                                <Badge badgeContent={totalItems} color='secondary'>
-                                    <ShoppingCart />
-                                </Badge>
-                            </IconButton>
-                        </div>
-                    )}
-
-                    {location.pathname === '/preview' && (
+                    {location.pathname !== '/cart' && location.pathname !== '/checkout' && (
                         <div className={classes.button}>
                             <IconButton component={Link} to='/cart' aria-label='Show cart items' color='inherit'>
                                 <Badge badgeContent={totalItems} color='secondary'>
