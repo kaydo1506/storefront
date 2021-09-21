@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import { Products, Navbar, Cart, Checkout, Preview } from './components';
 // //////////////////////////////////////////////
 
@@ -87,7 +87,7 @@ const App = () => {
     }, []);
 
     return (
-        <Router>
+        <HashRouter>
             <div>
                 <Navbar totalItems={cart.total_items} />
                 <Switch>
@@ -115,7 +115,7 @@ const App = () => {
                     </Route>
                 </Switch>
             </div>
-        </Router>
+        </HashRouter>
     );
 };
 
