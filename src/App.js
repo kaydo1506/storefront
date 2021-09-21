@@ -110,7 +110,7 @@ const App = () => {
                             error={errorMessage}
                         />
                     </Route>
-                    <Route path='/Preview'>
+                    <Route path='/Preview/:id'>
                         <Preview products={products} onAddToCart={handleAddToCart} />
                     </Route>
                 </Switch>
