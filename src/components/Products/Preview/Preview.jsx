@@ -55,8 +55,8 @@ const Preview = ({ products, onAddToCart }) => {
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={6}>
                             <CardMedia
+                                style={{ maxHeight: '800px' }}
                                 component='img'
-                                height='100%'
                                 image={product.media.source}
                                 title={product.name}
                             />
